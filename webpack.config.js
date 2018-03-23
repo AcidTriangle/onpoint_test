@@ -15,7 +15,12 @@ module.exports = {
 
   output: {
     filename: 'js/bundle.js',
+    publicPath: '/',
     path: PATHS.dist
+  },
+
+  devServer: {
+    stats: 'errors-only'
   },
 
   plugins: [
@@ -28,7 +33,7 @@ module.exports = {
       filename: 'css/styles.css',
       allChunks: true
     }),
-    new CleanPlugin('dist')
+    new CleanPlugin(PATHS.dist)
   ],
 
 
@@ -46,7 +51,7 @@ module.exports = {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
-            use: ['css-loader?minimize', 'postcss-loader', 'sass-loader']
+            use: ['css-loader?minimize', 'postcss-loader', 'sass-loader', 'import-glob-loader']
           })
       },
       {
@@ -62,8 +67,7 @@ module.exports = {
         options: {
           name: "fonts/[name].[ext]",
         },
-      },
-
+      }
     ]
   }
 };
