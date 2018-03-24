@@ -1,0 +1,22 @@
+.pagination {
+  @include align('Y');
+  position: fixed;
+  right: 27px;
+  z-index: 100;
+
+  &__list {
+    margin-top: -7px;
+  }
+
+  &__item {
+    width: 14px;
+    height: 14px;
+    background-color: $pagination-color;
+    border-radius: 50%;
+    margin-bottom: 7px;
+
+    &.active {
+      background-color: $pagination-active-color;
+    }
+  }
+}

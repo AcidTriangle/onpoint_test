@@ -18,8 +18,8 @@
       background-image: radial-gradient(circle at center,
               rgba($target-bg, $alpha) 0%,
               rgba($target-bg, $alpha) #{$offset-yellow * 1%},
-              rgba($target-border 1) #{$offset-red * 1%},
-              rgba($target-border 1) 100%);
+              rgba($target-border, 1) #{$offset-red * 1%},
+              rgba($target-border, 1) 100%);
     }
   }
 }
