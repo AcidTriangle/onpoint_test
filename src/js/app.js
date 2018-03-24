@@ -1,7 +1,7 @@
 import '../styles/main.scss'
 
-const work = () => {
-  console.log('work');
-};
+import pageScroll from './pageScroll';
 
-work();
+document.addEventListener('DOMContentLoaded', () => {
+  pageScroll();
+});
