@@ -8,4 +8,4 @@
 3. `npm install` 
 
 * `npm run build` для сборки 
-* `npm run start` для запуска локального сервера
+* `npm run start` для запуска локального сервера localhost:8080

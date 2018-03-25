@@ -26,6 +26,7 @@ function pageScroll() {
 
   //обработчик события на конец нажатия
   document.addEventListener('touchend', (e) => {
+    console.log(e);
     //точка конца нажатия
     let touchEnd = e.changedTouches[0].clientY;
 

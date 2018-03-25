@@ -1,14 +1,22 @@
 .slider {
   &__control {
     @include align('X');
-    width: 654px;
+    width: 640px;
     bottom: 28px;
     z-index: 80;
+  }
+
+  &__switcher-container {
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+    z-index: 100;
   }
 
   &__switcher {
     position: absolute;
     top: -22px;
+    left: -21px;
     width: 43px;
     height: 55px;
     background-size: contain;
@@ -18,9 +26,8 @@
 
   &__lines {
     position: relative;
-    margin: 0 auto;
-    width: 640px;
     height: 12px;
+    overflow: hidden;
   }
 
   &__line {
@@ -30,7 +37,7 @@
     background-color: rgba($slider-control-color, 0.3);
     &_active {
       background-color: $slider-control-color;
-      width: 500px;
+      left: -100%;
       z-index: 50;
     }
   }
